@@ -1,0 +1,43 @@
+/*
+	Comment
+*/
+body {
+    background-color: white;
+}
+
+h1 {
+    color: black;
+    margin-left: 20px;
+	text-align: center;
+	font-family:'Helvetica Neue', Arial, Helvetica, sans-serif; 
+	font-size: 55px;
+}
+#timer {
+	
+	font-family:'Helvetica Neue', Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 35px;
+	color: gray;
+}
+#a{
+	
+	font-family:verdana, futura, sans-serif;
+	text-align: center;
+}
+
+.b{
+	
+	font-family:verdana, futura, sans-serif;
+	color: red;
+	text-align: center;
+}
+
+.b em{
+	font-style: italic;
+}
+
+.c{
+	font-family: verdana, sans-serif;
+	color: gray;
+	text-align: center;
+}
