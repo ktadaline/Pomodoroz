@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript" src="timer.js"></script>
 
 	<title>POMODOROZ</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
@@ -13,8 +14,17 @@
 <br/>
 <br/>
 
-<script src="timer.js"></script>
 <div id = "timer"> <span id="time">Lets do this!</span> </div>
+
+
+<input id="startPomButton" type="button" value="start pomodoroz" onclick="startPomodoroz();"/>
+
+<input id="startShortBreakButton" type="button" value="start short break" onclick="startShortBreak();"/>
+
+<input id="startLongBreakButton" type = "button" value="start long break" onclick="startLongBreak();"/>
+
+<input id ="reset" type = "button" value ="reset" onclick="reset();"/>
+
 
 <br/>
 <br/>
