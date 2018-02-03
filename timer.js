@@ -1,25 +1,6 @@
-/*window.palmadoTimer = Timer();
-
-MyTimer = {
-	duration: 600,
-	reset: function() {
-		this.duration = 0;
-	},
-	setDuration: function(newDuration) {
-		this.duration = newDuration
-	},
-	startTimer() {
-		
-	}
-}
-
-MyTimer.reset()
-*/
-
-
 function startTimer(duration, display){
 	var timer = duration, minutes, seconds;
-	var theTimer = setInterval(function(){
+	window.pomodoroTimer = setInterval(function(){
 		minutes = parseInt(timer / 60, 10)
 		seconds = parseInt(timer % 60, 10);
 		
@@ -30,56 +11,60 @@ function startTimer(duration, display){
 			
 		
 		if (--timer < 0){
-			clearInterval(theTimer);
-			timer = duration;
+			clearInterval(window.pomodoroTimer);
+		//	timer = duration;
 			display.textContent = "Beeeeep!";
 		}
 	}, 1000);
 	
 }
 
-function reset(duration, display) {
-clearInterval	
+
+function stop() {
+	var stop = 60 * 0;		
+	clearInterval(window.pomodoroTimer);
+	display = document.querySelector('#time');
+	startTimer(stop, display);
 }
-/*
 
-window.onload = function () {
-	var twentyFiveMinutes = 60 * 25,
-		display = document.querySelector('#time');
-	startTimer(twentyFiveMinutes, display);
+var pausedTimer; 
+
+function pause(){
+	pausedTimer = window.pomodoroTimer;
+	clearInterval(window.pomodoroTimer);
+	document.querySelector('#time');
 	
-}; 
+	}
+
+function resume(){
+	window.pomodoTimer = pausedTimer;
+	docuument.querySelector('#time');
+}
 
 
-//var startButton = document.getElementById('startButton');
-*/
-
-
-//window.document.getElementById('startButton').onclick = 
 
 function startPomodoroz() {
-	var twentyFiveMinutes = 60 * 25,
-		display = document.querySelector('#time');
+	clearInterval(window.pomodoroTimer);
+	var twentyFiveMinutes = 60 * 25;
+	display = document.querySelector('#time');
 	startTimer(twentyFiveMinutes, display);
 	
 };
 
-
 function startShortBreak(){
-	var fiveMinutes = 6 * 1,
+	clearInterval(window.pomodoroTimer);
+		var fiveMinutes = 60 * 5;
 		display = document.querySelector('#time');
-	startTimer(fiveMinutes, display);
+		startTimer(fiveMinutes, display);
+		
 };
 
 function startLongBreak(){
-	var tenMinutes = 60 *10,
-		display = document.querySelector('#time');
+	clearInterval(window.pomodoroTimer);
+	var tenMinutes = 60 *10;
+	display = document.querySelector('#time');
 	startTimer(tenMinutes, display);
 };
 
-function reset(){
-	clearInterval(theTimer);
-	display = document.querySelector('#time');
-	startTimer(display);
-};
+
 
