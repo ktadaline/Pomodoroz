@@ -1,18 +1,27 @@
 body {
-  background: linear-gradient(to right, tomato, palevioletred); }
+  background: linear-gradient(to right, #51a8c2, #b9f8dc); }
 
 h1 {
   color: white;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: Ikaros, HK Nova, helvetica;
   font-size: 60px; }
 
 #timer {
   color: white;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  font-size: 50px; }
+  font-family: Ikaros, HK Nova, helvetica;
+  font-size: 50px;
+  padding: 55px; }
+
+#pomoCounter {
+  color: white;
+  font-family: Ikaros, HK Nova, helvetica;
+  font-size: 20px;
+  padding: 55px; }
 
 #startPomButton, #startShortBreakButton, #startLongBreakButton, #stop, #pause, #resume {
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  font-size: 15px;
-  border: 1px solid #999999;
-  padding: 5px; }
+  font-family: Ikaros, HK Nova, helvetica;
+  font-size: 28px;
+  color: white;
+  border: 1px solid white;
+  padding: 9px;
+  background-color: #51a8c2; }

@@ -2,20 +2,16 @@ var pomInterval;
 var timeGlobal;
 var intervalCount;
 var stopPressed = false;
+var pomPressed = false;
+var pomCount = 0;
+var breakPressed = false;
 var audio = new Audio("daydream.mp3");
 
-/*function playAudio(){
-	sound.play();
-}*/
-//var timer;
 
 function startTimer(duration, display){
 	var timer = duration, minutes, seconds;
 	intervalCount = 0;
-	//window.pomodoroTimer 
-	/*resumeButton.addEventListener("click", function(event){
-		clearInterval(pomInterval);
-*/
+
 		timeGlobal = timer;
 		console.log(timer);
 		pomInterval = setInterval(function(){
@@ -36,21 +32,27 @@ function startTimer(duration, display){
 			clearInterval(pomInterval);
 		//	timer = duration;
 					
-			display.textContent = "...";
+			display.textContent = "00:00";
 
 			if (!stopPressed){
 				//playSound()
-				display.textContent = "Times up!"
-				audio.play();			
+				if(pomPressed){
+				display.textContent = "Pomodoro completed. Nice job!"
+				audio.play();	
+				pomCount++;
+				countPom();
+				console.log("pomCount " + pomCount);
+				pomPressed = false;
+				}
+				else if(breakPressed){
+					display.textContent = "Break's over. Back to work!"
+					audio.play();
+					breakPressed = false;
+				}		
 			}
 
-			stopPressed = false;
 		}
 
-/*
-		pauseButton.addEventListener("click", function(event){
-			clearInterval(pomInterval);
-		});		*/
 		
 	}, 1000);
 }
@@ -89,7 +91,9 @@ function resume(){
 	//pomInterval = resumeInterval;
 	startTimer(resumeInterval, display);
 	}
-	//setInterval()
+
+
+		//setInterval()
 	
 	//setInterval(window.pomodoTimer) = pausedTimer;
 	//docuument.querySelector('#time');
@@ -99,16 +103,22 @@ function resume(){
 
 function startPomodoroz() {
 	clearInterval(pomInterval);
-	var twentyFiveMinutes = 60 * 25;
+	var twentyFiveMinutes = 6 * 1;
 	display = document.querySelector('#time');
+	breakPressed = false;
+	stopPressed = false;
+	pomPressed = true;
 	startTimer(twentyFiveMinutes, display);
 	
 };
 
 function startShortBreak(){
 	clearInterval(pomInterval);
-		var fiveMinutes = 60 * 5;
+		var fiveMinutes = 6 * 5;
 		display = document.querySelector('#time');
+		pomPressed = false;
+		stopPressed = false;
+		breakPressed = true;
 		startTimer(fiveMinutes, display);
 		
 };
@@ -117,8 +127,19 @@ function startLongBreak(){
 	clearInterval(pomInterval);
 	var tenMinutes = 60 *10;
 	display = document.querySelector('#time');
+	pomPressed=false;
+	stopPressed = false;
+	breakPressed = true;
 	startTimer(tenMinutes, display);
 };
+
+
+//function getPomCount()
+function countPom(){
+	document.getElementById('numberOfPoms').innerHTML = pomCount;
+};
+
+
 
 
 

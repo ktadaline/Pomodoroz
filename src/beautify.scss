@@ -1,15 +1,47 @@
 $primary-color: white;
-$primary-font: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+$primary-font:  Ikaros, HK Nova, helvetica;
+$gradient-color1:hsl(194, 48%, 54%);
+$gradient-color2: hsl(153, 82%, 85%);
+
+//$gradient-color1:#83a4d4;
+//$gradient-color2:#b6fbff;
+
+
+//$gradient-color2:#948e99;
+//$gradient-color1:#2e1437;
+
+//$gradient-color2:#360033;
+//$gradient-color1:#0b8793;
+
+//$gradient-color2:hsl(16, 100%, 75%);
+//$gradient-color1:hsl(207, 100%, 12%);
+
+
+
+//Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 
 body{
-    background: linear-gradient(to right, tomato, palevioletred);
+ background: linear-gradient(to right, $gradient-color1, $gradient-color2);
 
-  //  background: linear-gradient(to right, rgb(0, 112, 177), rgb(0, 71, 165));
+  //happy fisher (aqua)
+  //  background: linear-gradient(to right, hsl(184, 98%, 77%),  hsl(215, 100%, 70%));
+  
+  //eternal constance (navy)
+  //background: linear-gradient(to right,hsl(214, 75%, 14%), hsl(206, 28%, 45%));
+  
+  //morning salad
+  //background: linear-gradient(to right, hsl(194, 48%, 54%),  hsl(153, 82%, 85%));
+ 
+  //background: linear-gradient(to right, hsl(217, 96%, 81%), hsl(199, 88%, 87%));
 
-//  background: linear-gradient(to right, rgb(138, 119, 247), rgb(255, 127, 217));
+  //background: linear-gradient(to right, tomato, palevioletred);
+
+  //background: linear-gradient(to right, rgb(0, 112, 177), rgb(0, 71, 165));
+
+  //background: linear-gradient(to right, rgb(138, 119, 247), rgb(255, 127, 217));
 }
 h1{
-  color: $primary-color;
+  color:$primary-color;
   font-family: $primary-font;
   font-size: 60px;
 }
@@ -17,13 +49,26 @@ h1{
   color: $primary-color;
   font-family: $primary-font;
   font-size: 50px;
+  padding: 55px;
 }
+#pomoCounter{
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 20px;
+  padding: 55px;
+
+}
+
 %pomButtons{
   font-family: $primary-font;
-  font-size: 15px;
-  border: 1px solid rgb(153, 153, 153);
-  padding: 5px;
+  font-size: 28px;
+  color: white;
+  border: 1px solid hsl(0, 0%, 100%);
+  padding: 9px;
+  background-color:$gradient-color1; 
 }
+
+
 #startPomButton{
   @extend %pomButtons;
 }
