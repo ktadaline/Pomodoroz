@@ -4,40 +4,34 @@
 <script type="text/javascript" src="timer.js"></script>
 
 	<title>POMODOROZ</title>
-<link rel="stylesheet" type="text/css" href="prettify.css">
+<link rel="stylesheet" type="text/css" href="beautify.css">
 
 	  
 </head>
 <body>
 
 <h1>POMODOROZ</h1>
-<br/>
-<br/>
+
+<input id="startPomButton" type = "button" value="pomodoro" onclick="startPomodoroz();"/>
+
+<input id="startShortBreakButton" type="button" value="short break" onclick="startShortBreak();"/>
+
+<input id="startLongBreakButton" type = "button" value="long break" onclick="startLongBreak();"/>
+
 
 <div id = "timer"> <span id="time">Lets do this!</span> </div>
 
 
-<input id="startPomButton" type="button" value="start pomodoroz" onclick="startPomodoroz();"/>
+<input id ="resume" type = "button" value ="start" onclick="resume();"/>
+<input id="pause" type = "button" value = "stop" onclick="pause();"/>
+<input id ="stop" type = "button" value ="clear" onclick="stop();"/>
 
-<input id="startShortBreakButton" type="button" value="start short break" onclick="startShortBreak();"/>
 
-<input id="startLongBreakButton" type = "button" value="start long break" onclick="startLongBreak();"/>
 
-<input id ="stop" type = "button" value ="stop" onclick="stop();"/>
-
-<input id="pause" type = "button" value = "pause" onclick="pause();"/>
-
-<input id ="resume" type = "button" value ="resume" onclick="resume();"/>
 
 
 <br/>
 <br/>
-<p id="a">Baby steps.</p>
-<br/>
-<p class="b"> Live in the <em>present</em></p>
-<br/>
-<div class = "c"> Don't trust your future self to do what you should be doing now.</div>
-
 
 
 </body>

@@ -1,6 +1,12 @@
 var pomInterval;
 var timeGlobal;
 var intervalCount;
+var stopPressed = false;
+var audio = new Audio("daydream.mp3");
+
+/*function playAudio(){
+	sound.play();
+}*/
 //var timer;
 
 function startTimer(duration, display){
@@ -21,7 +27,7 @@ function startTimer(duration, display){
 		minutes = minutes < 10 ? "0" + minutes : minutes;
 		seconds = seconds < 10 ? "0" + seconds : seconds;
 		
-		display.textContent = "You have " + minutes + ":" + seconds + " minutes remaining.";
+		display.textContent = minutes + ":" + seconds;
 
 		intervalCount ++;
 		
@@ -29,8 +35,18 @@ function startTimer(duration, display){
 		if (--timer < 0){
 			clearInterval(pomInterval);
 		//	timer = duration;
-			display.textContent = "Beeeeep!";
+					
+			display.textContent = "...";
+
+			if (!stopPressed){
+				//playSound()
+				display.textContent = "Times up!"
+				audio.play();			
+			}
+
+			stopPressed = false;
 		}
+
 /*
 		pauseButton.addEventListener("click", function(event){
 			clearInterval(pomInterval);
@@ -43,9 +59,11 @@ function startTimer(duration, display){
 
 
 function stop() {
+	
 	var stop = 60 * 0;		
 	clearInterval(pomInterval);
 	display = document.querySelector('#time');
+	stopPressed = true;
 	startTimer(stop, display);
 }
 
@@ -70,12 +88,12 @@ function resume(){
 	var resumeInterval = timeGlobal - intervalCount;
 	//pomInterval = resumeInterval;
 	startTimer(resumeInterval, display);
-	
+	}
 	//setInterval()
 	
 	//setInterval(window.pomodoTimer) = pausedTimer;
 	//docuument.querySelector('#time');
-}
+//}
 
 
 

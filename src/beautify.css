@@ -1,12 +1,18 @@
-nav ul {
-  margin: 0;
-  padding: 6px;
-  list-style: none; }
+body {
+  background: linear-gradient(to right, tomato, palevioletred); }
 
-nav li {
-  display: inline-block; }
+h1 {
+  color: white;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 60px; }
 
-nav a {
-  display: block;
-  padding: 6px 69px;
-  text-decoration: none; }
+#timer {
+  color: white;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 50px; }
+
+#startPomButton, #startShortBreakButton, #startLongBreakButton, #stop, #pause, #resume {
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 15px;
+  border: 1px solid #999999;
+  padding: 5px; }

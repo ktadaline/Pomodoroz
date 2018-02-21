@@ -1,17 +1,46 @@
-$padding: 6px;
+$primary-color: white;
+$primary-font: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 
-nav {
-  ul {
-    margin: 0;
-    padding: $padding;
-    list-style: none;
-  }
+body{
+    background: linear-gradient(to right, tomato, palevioletred);
 
-  li { display: inline-block; }
+  //  background: linear-gradient(to right, rgb(0, 112, 177), rgb(0, 71, 165));
 
-  a {
-    display: block;
-    padding: $padding 69px;
-    text-decoration: none;
-  }
+//  background: linear-gradient(to right, rgb(138, 119, 247), rgb(255, 127, 217));
 }
+h1{
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 60px;
+}
+#timer{
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 50px;
+}
+%pomButtons{
+  font-family: $primary-font;
+  font-size: 15px;
+  border: 1px solid rgb(153, 153, 153);
+  padding: 5px;
+}
+#startPomButton{
+  @extend %pomButtons;
+}
+#startShortBreakButton{
+  @extend %pomButtons;
+}
+#startLongBreakButton{
+  @extend %pomButtons;
+}
+#stop{
+  @extend %pomButtons;
+}
+#pause{
+  @extend %pomButtons;
+}
+#resume{
+  @extend %pomButtons;
+}
+
+
