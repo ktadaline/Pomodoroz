@@ -1,22 +1,82 @@
 body {
   background: linear-gradient(to right, #51a8c2, #b9f8dc); }
 
-h1 {
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%; }
+
+nav li {
+  display: inline-block; }
+
+nav a {
+  color: #51a8c2;
+  display: inline-block;
+  padding: 12px 15px;
+  font-Size: 18px;
+  text-decoration: none;
+  font-family: Ikaros, HK Nova, helvetica; }
+
+nav a:hover {
+  background-color: #51a8c2;
+  color: white;
+  font-family: Ikaros, HK Nova, helvetica; }
+
+p {
   color: white;
   font-family: Ikaros, HK Nova, helvetica;
-  font-size: 60px; }
+  font-size: 18px;
+  font-style: italic;
+  position: fixed;
+  text-align: center;
+  top: 40px; }
+
+#setButtons {
+  margin: 0;
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  top: 190px;
+  transform: translate(-50%, -50%);
+  width: 470px; }
 
 #timer {
   color: white;
   font-family: Ikaros, HK Nova, helvetica;
   font-size: 50px;
-  padding: 55px; }
+  position: fixed;
+  left: 50%;
+  top: 340px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+#actionButtons {
+  margin: 0;
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  top: 490px;
+  transform: translate(-50%, -50%);
+  width: 290px; }
 
 #pomoCounter {
   color: white;
   font-family: Ikaros, HK Nova, helvetica;
   font-size: 20px;
-  padding: 55px; }
+  width: 700px;
+  position: fixed;
+  left: 50%;
+  top: 560px;
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 #startPomButton, #startShortBreakButton, #startLongBreakButton, #stop, #pause, #resume {
   font-family: Ikaros, HK Nova, helvetica;

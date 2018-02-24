@@ -23,7 +23,8 @@ function startTimer(duration, display){
 		minutes = minutes < 10 ? "0" + minutes : minutes;
 		seconds = seconds < 10 ? "0" + seconds : seconds;
 		
-		display.textContent = minutes + ":" + seconds;
+		display.style.fontSize = "350%";
+		display.innerHTML = minutes + ":" + seconds;
 
 		intervalCount ++;
 		
@@ -31,13 +32,14 @@ function startTimer(duration, display){
 		if (--timer < 0){
 			clearInterval(pomInterval);
 		//	timer = duration;
-					
+			display.style.fontSize = "350%";		
 			display.textContent = "00:00";
 
 			if (!stopPressed){
 				//playSound()
 				if(pomPressed){
-				display.textContent = "Pomodoro completed. Nice job!"
+				display.style.fontSize = "100%";
+				display.innerHTML = "Pomodoro completed.<br/> Nice job!"
 				audio.play();	
 				pomCount++;
 				countPom();
@@ -45,7 +47,8 @@ function startTimer(duration, display){
 				pomPressed = false;
 				}
 				else if(breakPressed){
-					display.textContent = "Break's over. Back to work!"
+					display.style.fontSize = "100%";
+					display.innerHTML = "Time's up.<br/>Back to work!"
 					audio.play();
 					breakPressed = false;
 				}		
@@ -85,12 +88,23 @@ function pause(){
 
 function resume(){
 	clearInterval(pomInterval);
-	console.log(timeGlobal);
-	document.querySelector('#time');
+	console.log("timeglobal" + timeGlobal);
+	display = document.querySelector('#time');
 	var resumeInterval = timeGlobal - intervalCount;
 	//pomInterval = resumeInterval;
+	if (timeGlobal == null || resumeInterval < 0){
+		//resumeInterval = 6;
+		//breakPressed = false;
+		//stopPressed = false;
+		//pomPressed = true;
+		startPomodoroz();
+	}
+	else{
 	startTimer(resumeInterval, display);
 	}
+	}
+
+
 
 
 		//setInterval()

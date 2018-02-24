@@ -40,22 +40,105 @@ body{
 
   //background: linear-gradient(to right, rgb(138, 119, 247), rgb(255, 127, 217));
 }
-h1{
+
+
+nav{
+    ul {  
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background-color: $primary-color;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+
+    }
+     
+     li{
+       display: inline-block;
+     } 
+     a{
+       color:  $gradient-color1;
+       display: inline-block;
+       padding: 12px 15px;
+       font-Size: 18px;
+       text-decoration: none;
+       font-family: $primary-font;
+     } 
+      a:hover{
+        background-color: $gradient-color1;
+        color: $primary-color;
+        font-family: $primary-font;
+      }
+  }
+
+
+  
+p{
   color:$primary-color;
   font-family: $primary-font;
-  font-size: 60px;
+  font-size: 18px;
+ // padding: 20px;
+ font-style: italic;
+  position: fixed;
+ // left: 50%;
+ text-align: center;
+  top: 40px;
+
 }
+
+
+
+#setButtons{
+  margin: 0;
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  top: 190px;
+  transform: translate(-50%, -50%);
+  width: 470px;
+}
+
 #timer{
   color: $primary-color;
   font-family: $primary-font;
   font-size: 50px;
-  padding: 55px;
+  //padding: 55px;
+  position: fixed;
+  left: 50%;
+  top: 340px;
+  transform: translate(-50%, -50%);
+  //width:100%;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
+#actionButtons{
+  margin: 0;
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  top: 490px;
+  transform: translate(-50%, -50%);
+  width: 290px;
+}
+
 #pomoCounter{
   color: $primary-color;
   font-family: $primary-font;
   font-size: 20px;
-  padding: 55px;
+ // padding: 20px;
+ // margin: auto;
+  width: 700px;
+  position: fixed;
+  left: 50%;
+  top: 560px;
+  transform: translate(-50%, -50%);
+  text-align: center;
 
 }
 
@@ -67,6 +150,7 @@ h1{
   padding: 9px;
   background-color:$gradient-color1; 
 }
+
 
 
 #startPomButton{
