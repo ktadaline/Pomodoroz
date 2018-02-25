@@ -22,7 +22,7 @@ $gradient-color2: hsl(153, 82%, 85%);
 
 body{
  background: linear-gradient(to right, $gradient-color1, $gradient-color2);
-
+ 
   //happy fisher (aqua)
   //  background: linear-gradient(to right, hsl(184, 98%, 77%),  hsl(215, 100%, 70%));
   
@@ -97,7 +97,7 @@ p{
   left: 50%;
   top: 190px;
   transform: translate(-50%, -50%);
-  width: 470px;
+  width: 480px;
 }
 
 #timer{
@@ -147,7 +147,7 @@ p{
   font-size: 28px;
   color: white;
   border: 1px solid hsl(0, 0%, 100%);
-  padding: 9px;
+  padding: 10px;
   background-color:$gradient-color1; 
 }
 

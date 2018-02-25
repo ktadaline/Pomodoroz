@@ -43,7 +43,7 @@ p {
   left: 50%;
   top: 190px;
   transform: translate(-50%, -50%);
-  width: 470px; }
+  width: 480px; }
 
 #timer {
   color: white;
@@ -83,5 +83,5 @@ p {
   font-size: 28px;
   color: white;
   border: 1px solid white;
-  padding: 9px;
+  padding: 10px;
   background-color: #51a8c2; }
