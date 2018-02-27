@@ -1,17 +1,37 @@
 $primary-color: white;
 $primary-font:  Ikaros, HK Nova, helvetica;
-$gradient-color1:hsl(194, 48%, 54%);
-$gradient-color2: hsl(153, 82%, 85%);
+//$gradient-color1:hsl(194, 48%, 54%);
+//$gradient-color2: hsl(153, 82%, 85%);
 
 //$gradient-color1:#83a4d4;
 //$gradient-color2:#b6fbff;
 
 
-//$gradient-color2:#948e99;
+$gradient-color2:#948e99;
+$gradient-color1:#2e1437;
+
+//$gradient-color2:#63566d;
 //$gradient-color1:#2e1437;
+
+
+//$gradient-color2:#ff9900;
+//$gradient-color1:#ff028d;
+
+//$gradient-color2:#9e0f8b;
+//$gradient-color1:#74020b;
+
+//$gradient-color2:#ff7c7c;
+//$gradient-color1:#c4026396;
+
+//$gradient-color2:#948e99;
+//$gradient-color1:#009b40;
 
 //$gradient-color2:#360033;
 //$gradient-color1:#0b8793;
+//background: linear-gradient(to right,hsl(214, 75%, 14%), hsl(206, 28%, 45%));
+
+//$gradient-color1: hsl(214, 75%, 14%);
+//$gradient-color2:  hsl(206, 28%, 45%);
 
 //$gradient-color2:hsl(16, 100%, 75%);
 //$gradient-color1:hsl(207, 100%, 12%);
@@ -59,7 +79,8 @@ nav{
        display: inline-block;
      } 
      a{
-       color:  $gradient-color1;
+       
+       color: $gradient-color1;
        display: inline-block;
        padding: 12px 15px;
        font-Size: 18px;
@@ -67,7 +88,7 @@ nav{
        font-family: $primary-font;
      } 
       a:hover{
-        background-color: $gradient-color1;
+        background-color: $gradient-color2;
         color: $primary-color;
         font-family: $primary-font;
       }
@@ -97,7 +118,7 @@ p{
   left: 50%;
   top: 190px;
   transform: translate(-50%, -50%);
-  width: 480px;
+  width: 615px;
 }
 
 #timer{
@@ -122,9 +143,9 @@ p{
   display: inline-block;
   position: fixed;
   left: 50%;
-  top: 490px;
+  top: 495px;
   transform: translate(-50%, -50%);
-  width: 290px;
+  width: 615px;
 }
 
 #pomoCounter{
@@ -144,32 +165,43 @@ p{
 
 %pomButtons{
   font-family: $primary-font;
-  font-size: 28px;
+  font-size: 24px;
   color: white;
-  border: 1px solid hsl(0, 0%, 100%);
-  padding: 10px;
-  background-color:$gradient-color1; 
+  border: none;
+  //border: 1px solid hsl(0, 0%, 100%);
+ // padding: 10px;
+  background-color: $gradient-color1; 
+  box-shadow: 1.5px 1.5px $gradient-color1*0.4;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $gradient-color1*0.7; 
+    //box-shadow: 2.5px 2.5px $gradient-color1*0.4;
+  }
+  &:focus{
+    outline:0;
+  }
 }
 
+//startPomButton:hover{opacity:1}
 
 
-#startPomButton{
+#startPomButton, #startShortBreakButton, #startLongBreakButton{
   @extend %pomButtons;
+  display: inline-block;
+  padding: 20px 39px;
+   //float: left;
 }
-#startShortBreakButton{
+
+#stop, #pause, #resume{
   @extend %pomButtons;
-}
-#startLongBreakButton{
-  @extend %pomButtons;
-}
-#stop{
-  @extend %pomButtons;
-}
-#pause{
-  @extend %pomButtons;
-}
-#resume{
-  @extend %pomButtons;
+   padding: 20px 59px;
+   //width: 150px;
+   //float: left;
+   display: inline-block;
+   text-align: center;
+
 }
 
 

@@ -5,6 +5,7 @@ var stopPressed = false;
 var pomPressed = false;
 var pomCount = 0;
 var breakPressed = false;
+var stringVar = "Pomodoro completed.<br/> Nice job!";
 var audio = new Audio("daydream.mp3");
 
 
@@ -39,7 +40,7 @@ function startTimer(duration, display){
 				//playSound()
 				if(pomPressed){
 				display.style.fontSize = "100%";
-				display.innerHTML = "Pomodoro completed.<br/> Nice job!"
+				display.innerHTML = stringVar;//"Pomodoro completed.<br/> Nice job!"
 				audio.play();	
 				pomCount++;
 				countPom();
