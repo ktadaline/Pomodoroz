@@ -1,5 +1,12 @@
+html {
+  height: 100%; }
+
 body {
-  background: linear-gradient(to right, #2e1437, #948e99); }
+  min-height: 100%;
+  background-image: url(pics/purpleSunset.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 nav ul {
   margin: 0;
@@ -15,7 +22,7 @@ nav li {
   display: inline-block; }
 
 nav a {
-  color: #2e1437;
+  color: #948e99;
   display: inline-block;
   padding: 12px 15px;
   font-Size: 18px;
@@ -82,14 +89,13 @@ p {
   font-family: Ikaros, HK Nova, helvetica;
   font-size: 24px;
   color: white;
-  border: none;
-  background-color: #2e1437;
-  box-shadow: 1.5px 1.5px #120816;
+  border: 1.5px solid rgba(255, 255, 255, 0.747);
+  background-color: rgba(0, 0, 0, 0.514);
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer; }
   #startPomButton:hover, #startShortBreakButton:hover, #startLongBreakButton:hover, #stop:hover, #pause:hover, #resume:hover {
-    background-color: #200e27; }
+    background-color: rgba(0, 0, 0, 0.3); }
   #startPomButton:focus, #startShortBreakButton:focus, #startLongBreakButton:focus, #stop:focus, #pause:focus, #resume:focus {
     outline: 0; }
 

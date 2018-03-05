@@ -5,13 +5,21 @@ var stopPressed = false;
 var pomPressed = false;
 var pomCount = 0;
 var breakPressed = false;
-var stringVar = "Pomodoro completed.<br/> Nice job!";
+var selected = "#200e27"
+var unselected = "#2e1437";
+var longBreak = document.getElementById('startLongBreakButton');
+var shortBreak = document.getElementById('startShortBreakButton');
+var pomButton = document.getElementById('startPomButton');
+var pauseButton = document.getElementById('pause');
+//var pomButton = document.getElementById('startPomButton');
+var stringPomComplete = "Pomodoro completed.<br/> Nice job!";
 var audio = new Audio("daydream.mp3");
 
 
 function startTimer(duration, display){
 	var timer = duration, minutes, seconds;
 	intervalCount = 0;
+	//document.getElementById('pause').style.background = unselected;
 
 		timeGlobal = timer;
 		console.log(timer);
@@ -40,18 +48,25 @@ function startTimer(duration, display){
 				//playSound()
 				if(pomPressed){
 				display.style.fontSize = "100%";
-				display.innerHTML = stringVar;//"Pomodoro completed.<br/> Nice job!"
+				display.innerHTML = stringPomComplete;//"Pomodoro completed.<br/> Nice job!"
 				audio.play();	
 				pomCount++;
 				countPom();
 				console.log("pomCount " + pomCount);
 				pomPressed = false;
+				pomButton.blur();
+				//document.getElementById('startPomButton').style.background = unselected;
 				}
 				else if(breakPressed){
 					display.style.fontSize = "100%";
 					display.innerHTML = "Time's up.<br/>Back to work!"
 					audio.play();
+					longBreak.blur();
+					shortBreak.blur();
+					//document.getElementById('startLongBreakButton').style.background = unselected;
+					//document.getElementById('startShortBreakButton').style.background = unselected;
 					breakPressed = false;
+					
 				}		
 			}
 
@@ -71,6 +86,13 @@ function stop() {
 	display = document.querySelector('#time');
 	stopPressed = true;
 	startTimer(stop, display);
+	pomButton.blur();
+	shortBreak.blur();
+	longBreak.blur();
+	pauseButton.blur();
+	//document.getElementById('startPomButton').style.background = unselected;
+	//document.getElementById('startLongBreakButton').style.background = unselected;
+	//document.getElementById('startShortBreakButton').style.background = unselected;
 }
 
 
@@ -80,6 +102,12 @@ function pause(){
 	document.querySelector('#time');
 	console.log(intervalCount);
 	clearInterval(pomInterval);
+	pauseButton.focus();
+	//pause.focus();
+	//if (pomPressed == true || breakPressed == true){
+	//document.getElementById('pause').style.background = selected;
+
+	//}
 	//pausedTimer = window.pomodoroTimer;
 	
 	//document.querySelector('#time');
@@ -98,10 +126,13 @@ function resume(){
 		//breakPressed = false;
 		//stopPressed = false;
 		//pomPressed = true;
+		
 		startPomodoroz();
 	}
 	else{
+	
 	startTimer(resumeInterval, display);
+	//document.getElementById('pause').style.background = uselected;
 	}
 	}
 
@@ -124,7 +155,13 @@ function startPomodoroz() {
 	stopPressed = false;
 	pomPressed = true;
 	startTimer(twentyFiveMinutes, display);
-	
+	pomButton.focus();
+	longBreak.blur();
+	shortBreak.blur();
+	//document.getElementById('startPomButton').style.background = selected;
+	//document.getElementById('startLongBreakButton').style.background = unselected;
+	//document.getElementById('startShortBreakButton').style.background = unselected;
+
 };
 
 function startShortBreak(){
@@ -135,17 +172,29 @@ function startShortBreak(){
 		stopPressed = false;
 		breakPressed = true;
 		startTimer(fiveMinutes, display);
+		pomButton.blur();
+		longBreak.blur();
+		shortBreak.focus();
+		//document.getElementById('startPomButton').style.background = unselected;
+		//document.getElementById('startLongBreakButton').style.background = unselected;
+		//document.getElementById('startShortBreakButton').style.background = selected;
 		
 };
 
 function startLongBreak(){
 	clearInterval(pomInterval);
-	var tenMinutes = 60 *10;
+	var tenMinutes = 6 *1;
 	display = document.querySelector('#time');
 	pomPressed=false;
 	stopPressed = false;
 	breakPressed = true;
 	startTimer(tenMinutes, display);
+	//document.getElementById('startPomButton').style.background = unselected;
+	longBreak.focus();
+	pomButton.blur();
+	shortBreakButton.blur();
+	//document.getElementById('startLongBreakButton').style.background = selected;
+	//document.getElementById('startShortBreakButton').style.background = unselected;
 };
 
 
