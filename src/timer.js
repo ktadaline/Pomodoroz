@@ -14,6 +14,8 @@ var pauseButton = document.getElementById('pause');
 //var pomButton = document.getElementById('startPomButton');
 var stringPomComplete = "Pomodoro completed.<br/> Nice job!";
 var audio = new Audio("daydream.mp3");
+var soundon = true;
+
 
 
 function startTimer(duration, display){
@@ -48,21 +50,22 @@ function startTimer(duration, display){
 				//playSound()
 				if(pomPressed){
 				display.style.fontSize = "100%";
-				display.innerHTML = stringPomComplete;//"Pomodoro completed.<br/> Nice job!"
-				audio.play();	
+				display.innerHTML = stringPomComplete;//"Pomodoro completed.<br/> Nice job!"		
 				pomCount++;
 				countPom();
 				console.log("pomCount " + pomCount);
 				pomPressed = false;
-				pomButton.blur();
+				audio.play();
+				//pomButton.blur();
+				
 				//document.getElementById('startPomButton').style.background = unselected;
 				}
 				else if(breakPressed){
 					display.style.fontSize = "100%";
 					display.innerHTML = "Time's up.<br/>Back to work!"
 					audio.play();
-					longBreak.blur();
-					shortBreak.blur();
+					//longBreak.blur();
+					//shortBreak.blur();
 					//document.getElementById('startLongBreakButton').style.background = unselected;
 					//document.getElementById('startShortBreakButton').style.background = unselected;
 					breakPressed = false;
@@ -86,10 +89,10 @@ function stop() {
 	display = document.querySelector('#time');
 	stopPressed = true;
 	startTimer(stop, display);
-	pomButton.blur();
-	shortBreak.blur();
-	longBreak.blur();
-	pauseButton.blur();
+	//pomButton.blur();
+	//shortBreak.blur();
+	//longBreak.blur();
+	//pauseButton.blur();
 	//document.getElementById('startPomButton').style.background = unselected;
 	//document.getElementById('startLongBreakButton').style.background = unselected;
 	//document.getElementById('startShortBreakButton').style.background = unselected;
@@ -155,9 +158,9 @@ function startPomodoroz() {
 	stopPressed = false;
 	pomPressed = true;
 	startTimer(twentyFiveMinutes, display);
-	pomButton.focus();
-	longBreak.blur();
-	shortBreak.blur();
+	//pomButton.focus();
+	//longBreak.blur();
+	//shortBreak.blur();
 	//document.getElementById('startPomButton').style.background = selected;
 	//document.getElementById('startLongBreakButton').style.background = unselected;
 	//document.getElementById('startShortBreakButton').style.background = unselected;
@@ -172,9 +175,9 @@ function startShortBreak(){
 		stopPressed = false;
 		breakPressed = true;
 		startTimer(fiveMinutes, display);
-		pomButton.blur();
-		longBreak.blur();
-		shortBreak.focus();
+		//pomButton.blur();
+		//longBreak.blur();
+		//shortBreak.focus();
 		//document.getElementById('startPomButton').style.background = unselected;
 		//document.getElementById('startLongBreakButton').style.background = unselected;
 		//document.getElementById('startShortBreakButton').style.background = selected;
@@ -190,9 +193,9 @@ function startLongBreak(){
 	breakPressed = true;
 	startTimer(tenMinutes, display);
 	//document.getElementById('startPomButton').style.background = unselected;
-	longBreak.focus();
-	pomButton.blur();
-	shortBreakButton.blur();
+	//longBreak.focus();
+	//pomButton.blur();
+	//shortBreakButton.blur();
 	//document.getElementById('startLongBreakButton').style.background = selected;
 	//document.getElementById('startShortBreakButton').style.background = unselected;
 };
@@ -202,6 +205,69 @@ function startLongBreak(){
 function countPom(){
 	document.getElementById('numberOfPoms').innerHTML = pomCount;
 };
+
+function soundbut(){
+
+	if (soundon)
+	{
+	document.getElementById("soundButton").src = "pics/soundoff.png";
+	soundon=false;
+	audio.muted = true;
+	//audio.pause();
+	//audio = null;
+	//audio.currentTime = 0.0;
+	}
+
+
+  else if (!soundon)
+  {
+	document.getElementById('soundButton').src = 'pics/soundon.png';
+	soundon=true;
+	audio.muted = false;
+	//audio = new Audio("daydream.mp3");
+  }
+};
+
+
+function randomNumber(){
+var x = Math.floor((Math.random() * 10));
+return x;
+}
+
+var backgrounds=[
+"pics/purpleSunset.jpeg", 
+"pics/duneNight.jpeg", 
+"pics/starryDusk.png", 
+"pics/purpleDusk.jpeg", 
+"pics/mirroredPeaks.jpeg", 
+"pics/coffee.jpeg", 
+"pics/wheatContrast.jpeg", 
+"pics/mistyPeaks.jpeg",
+"pics/sunset.jpeg",
+"pics/layers.jpeg"];
+
+function randomBackground(){
+	var x = randomNumber();
+	var y = backgrounds[x];
+	console.log(y);
+}
+
+
+
+//var body = document.querySelector('body');
+
+
+//document.getElementsByTagName("body")[0].style = ('--background-pic', randomBackground());
+
+
+//body.style.setProperty('--background-pic', randomBackground());
+
+
+
+
+
+
+
 
 
 

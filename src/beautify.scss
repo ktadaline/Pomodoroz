@@ -6,6 +6,32 @@ $primary-font:  Ikaros, HK Nova, helvetica;
 //$gradient-color1:#83a4d4;
 //$gradient-color2:#b6fbff;
 
+#test{
+top: 280px;
+width: 200px;
+
+}
+#soundButton{
+//background-image: url(pics/soundon.png);
+//width: 100px;
+//top: 1000px;
+//width: 70px;
+height: 40px;
+position: fixed;
+left: 50%;
+//right: 15px;
+//top: 88px;
+top: 640px;
+transform: translate(-50%, -50%);
+text-align: center;
+outline: none;
+}
+//#soundOff{
+//background-image: url(pics/soundoff.png);
+//width: 200px;
+//top: 500px;
+//}
+
 
 $gradient-color2:#948e99;
 $gradient-color1:#2e1437;
@@ -99,11 +125,13 @@ min-height: 100%;
 //background-image: url(pics/warmLagoon.jpeg);
 
 
-//background-image: url(pics/duneNight.jpeg);
+//background-image: (url(var(--background-pic)));
+
+background-image: url(pics/duneNight.jpeg);
 //background-image: url(pics/starryDusk.png);
 //background-image: url(pics/purpleDusk.jpeg);
 //background-image: url(pics/mirroredPeaks.jpeg);
-background-image: url(pics/purpleSunset.jpeg);
+//background-image: url(pics/purpleSunset.jpeg);
 //background-image: url(pics/coffee.jpeg);
 //background-image: url(pics/wheatContrast.jpeg);
 //background-image: url(pics/mistyPeaks.jpeg);

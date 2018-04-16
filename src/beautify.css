@@ -1,9 +1,22 @@
+#test {
+  top: 280px;
+  width: 200px; }
+
+#soundButton {
+  height: 40px;
+  position: fixed;
+  left: 50%;
+  top: 640px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  outline: none; }
+
 html {
   height: 100%; }
 
 body {
   min-height: 100%;
-  background-image: url(pics/purpleSunset.jpeg);
+  background-image: url(pics/duneNight.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
