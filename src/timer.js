@@ -152,7 +152,7 @@ function resume(){
 
 function startPomodoroz() {
 	clearInterval(pomInterval);
-	var twentyFiveMinutes = 6 * 1;
+	var twentyFiveMinutes = 25 * 60;
 	display = document.querySelector('#time');
 	breakPressed = false;
 	stopPressed = false;
@@ -169,7 +169,7 @@ function startPomodoroz() {
 
 function startShortBreak(){
 	clearInterval(pomInterval);
-		var fiveMinutes = 6 * 5;
+		var fiveMinutes = 5 * 60;
 		display = document.querySelector('#time');
 		pomPressed = false;
 		stopPressed = false;
@@ -186,7 +186,7 @@ function startShortBreak(){
 
 function startLongBreak(){
 	clearInterval(pomInterval);
-	var tenMinutes = 6 *1;
+	var tenMinutes = 10 * 60;
 	display = document.querySelector('#time');
 	pomPressed=false;
 	stopPressed = false;

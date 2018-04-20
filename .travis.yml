@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- node
+install:
+  - npm install gulp
+  - gem install sass
+  - gulp sass
+script:
+- echo "success"
+deploy:
+  provider: s3
+  access_key_id: AKIAJ5F5NC63TUVQILVA
+  secret_access_key:
+    secure: Wt+2HTyd6AlugwZv07tERZxzYNYOUfxX3twCSjWByLg20U+eBkupjon+lYp29zK4Uwv6KSI35zKr6HtnM6d7st6cxJW+mW3eGQdFtFOLwkymrbDylPhkwi/+cpL+FWc22he97pkPOhYYn7zpRG0BLaecB1HjKJ1Y3EULDrZmASEr7dfX11iv37Zc+b54nyr/p/nPbxDMfKEAkQeBqVgPxAUXexC/NRVBnHeXpFdlupcAfL28S1k8tt2f9JHulphIjhjWhjj5yWYKfz1kNFP3e5g9ZLJzpBXszsr6n8qWK2zqAAvOmvr2d+9E7t4V1tPNurJjtcl+feAZK8VlkCjvIpmr8rskyO1YrOraua/N/AKr0WjNZJBlzWpamwKUypfKq9AFi/+IobYso4iSJdWbfvnjev5/LnLScVd0+rhQmzVBvbZhjBwm1fSK1E7Ml8X4uud1AilhsBuSRRRqz+BfyG6CPKspRC3va5IzedYVT/4zpv7Gu+SF4qTakS5jQPvjMkwwKfPiIE7H3+bZ97P19eZZ2TdKbYK6VQ65S4XLcKa2h5IccnWVSrKeU7LUeM+W2wLDjsnhLs4LRfwBij52J5nhVfu13A7TKzZJ7zdyFYO6Tl9LrPNcIg3pbh4oY93FztZREhGdpbbu7m2TDJj7Wby1JQHNu4vaZPYrxSxls8U=
+  bucket: pomodoroz.com
+  local_dir: src
+  on:
+    repo: ktadaline/Pomodoroz
+    branch: master
+
