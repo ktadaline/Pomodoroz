@@ -178,7 +178,7 @@ nav{
      li{
        display: inline-block;
      } 
-     a{
+     #title{
        
        color: $gradient-color2;//$gradient-color1;
        display: inline-block;
@@ -187,7 +187,7 @@ nav{
        text-decoration: none;
        font-family: $primary-font;
      } 
-      a:hover{
+      #title:hover{
         background-color: $gradient-color2;
         color: $primary-color;
         font-family: $primary-font;
@@ -196,7 +196,7 @@ nav{
 
 
   
-p{
+  #subtitle{
   color:$primary-color;
   font-family: $primary-font;
   font-size: 18px;
@@ -309,6 +309,55 @@ p{
    //float: left;
    display: inline-block;
    text-align: center;
+
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  #startPomButton, #startShortBreakButton, #startLongBreakButton{
+    font-size: 52px;
+    padding: 48px 34px;
+  }
+
+  #setButtons{
+    width: 960px;
+    top: 500px;
+  }
+  #actionButtons{
+    width: 960px;
+    top: 1110px;
+  }
+
+  #stop, #pause, #resume {
+    padding: 48px 77px;
+    font-size: 52px;
+  }
+  #subtitle{
+    font-size: 45px;
+    top: 103px;
+  }
+  #pomoCounter{
+    font-size: 45px;
+    top: 1230px;
+    width: 980px;
+  }
+
+  #timer{
+    //top: 390px;
+    top: 800px;
+    font-size: 110px;
+  }
+
+ #soundButton{
+   top: 1360px;
+ }
+ nav #title{
+   font-size: 60px;
+   padding: 20px 15px;
+ }
+
 
 }
   
