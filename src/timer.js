@@ -24,10 +24,10 @@ function startTimer(duration, display){
 	//document.getElementById('pause').style.background = unselected;
 
 		timeGlobal = timer;
-		console.log(timer);
+		//console.log(timer);
 		pomInterval = setInterval(function(){
 
-		console.log("Interval!!!");
+		//console.log("Interval!!!");
 		minutes = parseInt(timer / 60, 10)
 		seconds = parseInt(timer % 60, 10);
 		
@@ -105,7 +105,7 @@ function pause(){
 	document.querySelector('#time');
 	console.log(intervalCount);
 	clearInterval(pomInterval);
-	pauseButton.focus();
+	//pauseButton.focus();
 	//pause.focus();
 	//if (pomPressed == true || breakPressed == true){
 	//document.getElementById('pause').style.background = selected;
