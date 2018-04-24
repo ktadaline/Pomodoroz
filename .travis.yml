@@ -15,6 +15,7 @@ deploy:
   bucket: pomodoroz.com
   local_dir: src
   skip_cleanup: true
+  region: us-east-2
   on:
     repo: ktadaline/Pomodoroz
     branch: master
