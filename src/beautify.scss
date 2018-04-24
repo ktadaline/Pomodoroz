@@ -318,20 +318,20 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
   #startPomButton, #startShortBreakButton, #startLongBreakButton{
     font-size: 52px;
-    padding: 48px 34px;
+    padding: 48px 32px;
   }
 
   #setButtons{
-    width: 960px;
+    width: 950px;
     top: 500px;
   }
   #actionButtons{
-    width: 960px;
+    width: 950px;
     top: 1110px;
   }
 
   #stop, #pause, #resume {
-    padding: 48px 77px;
+    padding: 48px 75px;
     font-size: 52px;
   }
   #subtitle{
