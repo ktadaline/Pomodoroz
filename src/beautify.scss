@@ -318,20 +318,20 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
   #startPomButton, #startShortBreakButton, #startLongBreakButton{
     font-size: 52px;
-    padding: 48px 32px;
+    padding: 48px 33px;
   }
 
   #setButtons{
-    width: 950px;
+    width: 960px;
     top: 500px;
   }
   #actionButtons{
-    width: 950px;
+    width: 960px;
     top: 1110px;
   }
 
   #stop, #pause, #resume {
-    padding: 48px 75px;
+    padding: 48px 77px;
     font-size: 52px;
   }
   #subtitle{
@@ -361,5 +361,21 @@ and (max-device-width : 480px) {
 
 }
   
-
+@media only screen and (max-device-width: 640px) and (orientation: landscape){
+  #setButtons{
+    top: 140px;
+  }
+  #timer{
+    top:265px;
+  }
+  #actionButtons{
+    top: 385px;
+  }
+  #pomoCounter{
+    top: 440px;
+  }
+  #soundButton{
+    top:510px;
+  }
+}
 
